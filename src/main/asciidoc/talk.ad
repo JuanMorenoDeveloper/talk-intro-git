@@ -12,6 +12,7 @@ include::footer.ad[]
 Contenido de la presentación:
 
 * Secciones teóricas:
+** Introducción al versionado de código
 ** ¿Qué es Git?
 ** ¿Cómo funciona?
 ** Fundamentos
