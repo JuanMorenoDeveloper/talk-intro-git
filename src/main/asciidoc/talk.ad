@@ -1,0 +1,25 @@
+= Introducción a Git
+:icons: font
+:twitter-tag: ACCSA
+:conference-tag:
+:talk-tag: Intro Git
+:linkattrs:
+
+include::footer.ad[]
+
+[NOTE.speaker]
+====
+Contenido de la presentación:
+
+* Secciones teóricas:
+** ¿Qué es Git?
+** ¿Cómo funciona?
+** Fundamentos
+** Tutorial
+** Git-Flow
+* Sección práctica
+** Línea de comandos
+
+====
+
+include::self.ad[]
