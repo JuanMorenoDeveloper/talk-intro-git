@@ -211,6 +211,12 @@ Reemplazar todos los cambios por los del servidor
  git fetch origin
  git reset --hard origin/master
 
+== git-flow
+
+== !
+
+image::git-model@2x.png[]
+
 == Conclusiones
 
 * El control de versiones mejora la experiencia de desarrollo
