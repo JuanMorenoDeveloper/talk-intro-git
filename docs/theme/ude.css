@@ -4,7 +4,7 @@
  *
  * background pattern from https://subtlepatterns.com/skin-side-up/*
  */
-@import url(font-awesome/all.css);
+@import url(font-awesome/font-awesome.min.css);
 /* amatic-sc-regular - latin */
 @font-face {
   font-family: 'Amatic SC';

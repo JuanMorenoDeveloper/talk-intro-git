@@ -1,4 +1,5 @@
-= Introducción a icon:git[]
+= Introducción a Git
+
 :icons: font
 :twitter-tag: ACCSA
 :conference-tag:
@@ -22,15 +23,15 @@ Contenido de la presentación:
 ** Línea de comandos
 ====
 
-== Introducción al versionado de código icon:code-branch[]
+== Introducción al versionado de código icon:code-fork[]
 
 > no existe un proyecto software sobre que funcione mínimamente bien (en lo que refiere a calidad, productividad y tranquilidad) sin una buena gestión de la configuración y control de versiones. - Javier Garzas
 
-== ¿Qué es el control de versiones?
+== ¿Qué es el control de versiones? icon:code[]
 
 Un control de versiones es un sistema que registra los *cambios* realizados en un archivo o conjunto de archivos *a lo largo del tiempo*, de modo que puedas *recuperar versiones* específicas más adelante.
 
-== Permite
+== Permite icon:check-square[]
 
 * Regresar a versiones anteriores
 * Comparar cambios
@@ -38,10 +39,10 @@ Un control de versiones es un sistema que registra los *cambios* realizados en u
 * Saber cuándo se agregaron cambios
 * Recuperar archivos
 
-== Tipos de control de versiones
+== Tipos de control de versiones icon:code-fork[]
 
-* Centralizados
-* Distribuidos
+* Centralizados: 1 solo servidor, clientes descargan código desde allí (copias instantáneas).
+* Distribuidos: Cada cliente tiene una copia completa del repositorio (branch, commits).
 
 == Estrategias de control de versiones
 
@@ -50,14 +51,40 @@ image::lineal.png[]
 
 * En este enfoque los errores se propagan más fácilmente
 
-== Desarrollo Paralelo, a través de ramas
+== Desarrollo Paralelo, a través de ramas icon:code-fork[]
 image::paralelo.png[]
-* Una rama por funcionalidad
 
-== Desarrollo Paralelo, a través de ramas
+== Desarrollo Paralelo, a través de ramas icon:code-fork[]
+* Una rama por funcionalidad
 * Cada desarrollador puede subir su código al control de versiones sin temer romper el código de los demás.
 * Se reduce la propagación de errores.
 * Se puede asegurar que la línea principal es estable, las tareas que partan de allí van a tener un inicio estable.
 * Las tareas son independientes unas de otras.
+
+== ¿Qué es icon:git[] ?
+
+* Sistema de control de versiones
+* Diseñado por Linus Torvalds
+
+Tiene como objetivos:
+
+** Eficiencia
+** Confiabilidad del mantenimiento de versiones de aplicaciones
+
+== ¿Cómo funciona?
+
+* Guarda copias instantáneas de los archivos, no diferencias.
+* Sistema de archivos en miniatura.
+* Si los archivos no se modifican, crea un puntero al archivo anterior.
+
+== Fundamentos
+
+* Las operaciones locales.
+* Controla la integridad de los archivos (SHA-1)
+
+
+
+
+
 
 include::self.ad[]
