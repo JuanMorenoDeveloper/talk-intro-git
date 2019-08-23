@@ -26,6 +26,23 @@ Contenido de la presentación:
 
 > no existe un proyecto software sobre que funcione mínimamente bien (en lo que refiere a calidad, productividad y tranquilidad) sin una buena gestión de la configuración y control de versiones. - Javier Garzas
 
+== ¿Qué es el control de versiones?
+
+Un control de versiones es un sistema que registra los *cambios* realizados en un archivo o conjunto de archivos *a lo largo del tiempo*, de modo que puedas *recuperar versiones* específicas más adelante.
+
+== Permite
+
+* Regresar a versiones anteriores
+* Comparar cambios
+* Saber quién agrego cambios
+* Saber cuándo se agregaron cambios
+* Recuperar archivos
+
+== Tipos de control de versiones
+
+* Centralizados
+* Distribuidos
+
 == Estrategias de control de versiones
 
 == Desarrollo Lineal
@@ -42,8 +59,5 @@ image::paralelo.png[]
 * Se reduce la propagación de errores.
 * Se puede asegurar que la línea principal es estable, las tareas que partan de allí van a tener un inicio estable.
 * Las tareas son independientes unas de otras.
-
-
-
 
 include::self.ad[]
