@@ -24,7 +24,7 @@ Contenido de la presentación:
 
 == Introducción al versionado de código icon:code-fork[]
 
-> no existe un proyecto software sobre que funcione mínimamente bien (en lo que refiere a calidad, productividad y tranquilidad) sin una buena gestión de la configuración y control de versiones. - Javier Garzas
+> no existe un proyecto software que funcione mínimamente bien (en lo que refiere a calidad, productividad y tranquilidad) sin una buena gestión de la configuración y control de versiones. - Javier Garzas
 
 == !
 
@@ -76,7 +76,7 @@ image:branches.png[]
 Tiene como objetivos:
 
 ** Eficiencia
-** Confiabilidad del mantenimiento de versiones de aplicaciones
+** Confiabilidad en el mantenimiento de versiones de aplicaciones
 
 == ¿Cómo funciona?
 
@@ -86,7 +86,7 @@ Tiene como objetivos:
 
 == Fundamentos
 
-* Las operaciones locales.
+* Las operaciones son locales.
 * Controla la integridad de los archivos (SHA-1)
 * Funciona con una base de datos a la que agrega datos
 * Maneja estados para los archivos
@@ -95,7 +95,7 @@ Tiene como objetivos:
 
 . Committed (Confirmado): Datos almacenados de manera segura en la BD local
 . Modified (Modificado): Archivos modificados sin guardar
-. Staged (Preparado): Archivos preparados para agregar en la próxima confirmación.
+. Staged (Preparado): Archivos preparados para agregar en el próximo commit.
 
 == !
 image::trees.png[]
@@ -217,6 +217,6 @@ Reemplazar todos los cambios por los del servidor
 * Permite manejar cambios y correcciones de una manera más robusta
 * El modelo distribuido y por ramas permite realizar actividades en paralelo
 * La manera más completa de usar git es a través de la línea de comandos
-* Al ser Git el estándar de control de versiones de los proyectos open source posee una gran comunidad my extensa documentación.
+* Al ser Git el estándar de control de versiones de los proyectos open source posee una gran comunidad y una extensa documentación.
 
 include::self.ad[]
