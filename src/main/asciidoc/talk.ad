@@ -213,9 +213,7 @@ Reemplazar todos los cambios por los del servidor
 
 == git-flow
 
-== !
-
-image::git-model@2x.png[]
+image::git-flow.svg[width=700px]
 
 == Conclusiones
 
