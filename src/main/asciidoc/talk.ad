@@ -20,12 +20,15 @@ Contenido de la presentación:
 ** Tutorial
 ** Git-Flow
 * Sección práctica
-** Línea de comandos
 ====
 
 == Introducción al versionado de código icon:code-fork[]
 
 > no existe un proyecto software sobre que funcione mínimamente bien (en lo que refiere a calidad, productividad y tranquilidad) sin una buena gestión de la configuración y control de versiones. - Javier Garzas
+
+== !
+
+image::ruta-integracion-continua.png[]
 
 == ¿Qué es el control de versiones? icon:code[]
 
@@ -81,10 +84,23 @@ Tiene como objetivos:
 
 * Las operaciones locales.
 * Controla la integridad de los archivos (SHA-1)
+* Funciona con una base de datos a la que agrega datos
+* Maneja estados para los archivos
 
+== Tres estados
 
+. Committed (Confirmado): Datos almacenados de manera segura en la BD local
+. Modified (Modificado): Archivos modificados sin guardar
+. Staged (Preparado): Archivos preparados para agregar en la próxima confirmación.
 
+== Secciones principales de un proyecto Git
+. Directorio icon:git[]: Metadatos y BD.
+. Directorio de trabajo (working directory): Es una copia de una versión del proyecto. Es donde hacemos los cambios.
+. Area de preparación (staging area): Información acerca de lo que va ir en el próximo commit (index).
 
-
+== Flujo básico
+. Modificas una serie de archivos en tu directorio de trabajo.
+. Preparas los archivos, añadiéndolos a tu área de preparación.
+. Confirmas los cambios, lo que toma los archivos tal y como están en el área de preparación y almacena esa copia instantánea de manera permanente en tu directorio de Git.
 
 include::self.ad[]
