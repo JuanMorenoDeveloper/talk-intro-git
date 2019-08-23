@@ -39,15 +39,60 @@ document.getElementsByTagName( 'head' )[0].appendChild( link );</script><!--[if 
 <div class="ulist"><ul><li><p>En este enfoque los errores se propagan más fácilmente</p></li></ul></div></section>
 <section id="_desarrollo_paralelo_a_través_de_ramas"><h2>Desarrollo Paralelo, a través de ramas <span class="icon"><i class="fa fa-code-fork"></i></span></h2><div class="imageblock" style=""><img src="images/paralelo.png" alt="paralelo" /></div></section>
 <section id="_desarrollo_paralelo_a_través_de_ramas_2"><h2>Desarrollo Paralelo, a través de ramas <span class="icon"><i class="fa fa-code-fork"></i></span></h2><div class="ulist"><ul><li><p>Una rama por funcionalidad</p></li><li><p>Cada desarrollador puede subir su código al control de versiones sin temer romper el código de los demás.</p></li><li><p>Se reduce la propagación de errores.</p></li><li><p>Se puede asegurar que la línea principal es estable, las tareas que partan de allí van a tener un inicio estable.</p></li><li><p>Las tareas son independientes unas de otras.</p></li></ul></div></section>
+<section><div class="paragraph"><p><span class="image"><img src="images/branches.png" alt="branches" /></span></p></div></section>
 <section id="_qué_es"><h2>¿Qué es <span class="icon"><i class="fa fa-git"></i></span> ?</h2><div class="ulist"><ul><li><p>Sistema de control de versiones</p></li><li><p>Diseñado por Linus Torvalds</p></li></ul></div>
 <div class="paragraph"><p>Tiene como objetivos:</p></div>
 <div class="ulist"><ul><li><p>Eficiencia</p></li><li><p>Confiabilidad del mantenimiento de versiones de aplicaciones</p></li></ul></div></section>
 <section id="_cómo_funciona"><h2>¿Cómo funciona?</h2><div class="ulist"><ul><li><p>Guarda copias instantáneas de los archivos, no diferencias.</p></li><li><p>Sistema de archivos en miniatura.</p></li><li><p>Si los archivos no se modifican, crea un puntero al archivo anterior.</p></li></ul></div></section>
 <section id="_fundamentos"><h2>Fundamentos</h2><div class="ulist"><ul><li><p>Las operaciones locales.</p></li><li><p>Controla la integridad de los archivos (SHA-1)</p></li><li><p>Funciona con una base de datos a la que agrega datos</p></li><li><p>Maneja estados para los archivos</p></li></ul></div></section>
 <section id="_tres_estados"><h2>Tres estados</h2><div class="olist arabic"><ol class="arabic"><li><p>Committed (Confirmado): Datos almacenados de manera segura en la BD local</p></li><li><p>Modified (Modificado): Archivos modificados sin guardar</p></li><li><p>Staged (Preparado): Archivos preparados para agregar en la próxima confirmación.</p></li></ol></div></section>
+<section><div class="imageblock" style=""><img src="images/trees.png" alt="trees" /></div></section>
 <section id="_secciones_principales_de_un_proyecto_git"><h2>Secciones principales de un proyecto Git</h2><div class="olist arabic"><ol class="arabic"><li><p>Directorio <span class="icon"><i class="fa fa-git"></i></span>: Metadatos y BD.</p></li><li><p>Directorio de trabajo (working directory): Es una copia de una versión del proyecto. Es donde hacemos los cambios.</p></li><li><p>Area de preparación (staging area): Información acerca de lo que va ir en el próximo commit (index).</p></li></ol></div></section>
 <section id="_flujo_básico"><h2>Flujo básico</h2><div class="olist arabic"><ol class="arabic"><li><p>Modificas una serie de archivos en tu directorio de trabajo.</p></li><li><p>Preparas los archivos, añadiéndolos a tu área de preparación.</p></li><li><p>Confirmas los cambios, lo que toma los archivos tal y como están en el área de preparación y almacena esa copia instantánea de manera permanente en tu directorio de Git.</p></li></ol></div></section>
-<section><div class="ulist"><ul><li><p>Fuentes:</p></li><li><p>Pro Git - S. Chacon, B. Straub - Apress</p></li><li><p><a href="https://www.javiergarzas.com/2012/11/control-versiones.html">Por qué siempre digo que la gestión de versiones es imprescindible. Una experiencia real ilustrativa - Javier Garzas</a></p></li><li><p><a href="https://www.javiergarzas.com/2014/05/control-versiones-scrum.html">¿Qué estrategia de control de versiones seguir en un equipo Scrum?</a></p></li></ul></div>
+<section id="_comandos_básicos_de"><h2>Comandos básicos de <span class="icon"><i class="fa fa-git"></i></span></h2><div class="paragraph"><p><span class="icon"><i class="fa fa-terminal"></i></span></p></div></section>
+<section id="_crear_un_nuevo_repositorio"><h2>Crear un nuevo repositorio</h2><div class="literalblock"><div class="content"><pre>git init</pre></div></div></section>
+<section id="_checkout_un_repositorio"><h2>Checkout un repositorio</h2><div class="literalblock"><div class="content"><pre>git clone /path/to/repository</pre></div></div>
+<div class="paragraph"><p>o</p></div>
+<div class="literalblock"><div class="content"><pre>git clone username@host:/path/to/repository</pre></div></div></section>
+<section id="_agregar_commit"><h2>Agregar &amp; commit</h2><div class="paragraph"><p>Proponer cambios:</p></div>
+<div class="literalblock"><div class="content"><pre>git add &lt;filename&gt;
+git add *</pre></div></div>
+<div class="paragraph"><p>Commit</p></div>
+<div class="literalblock"><div class="content"><pre>git commit -m "Commit message"</pre></div></div></section>
+<section id="_pushing_a_servidor_remoto"><h2>Pushing a servidor remoto</h2><div class="literalblock"><div class="content"><pre>git push origin master</pre></div></div>
+<div class="paragraph"><p>Se puede agregar un server con:</p></div>
+<div class="literalblock"><div class="content"><pre>git remote add origin &lt;server&gt;</pre></div></div></section>
+<section id="_ramas"><h2>Ramas</h2><div class="paragraph"><p>Crear nueva rama</p></div>
+<div class="literalblock"><div class="content"><pre>git checkout -b feature_x</pre></div></div>
+<div class="paragraph"><p>Cambiar a master</p></div>
+<div class="literalblock"><div class="content"><pre>git checkout master</pre></div></div>
+<div class="paragraph"><p>Borrar una rama</p></div>
+<div class="literalblock"><div class="content"><pre>git checkout master</pre></div></div>
+<div class="paragraph"><p>Publicar rama en servidor remoto</p></div>
+<div class="literalblock"><div class="content"><pre>git push origin &lt;branch&gt;</pre></div></div></section>
+<section id="_update_merge"><h2>Update &amp; merge</h2><div class="paragraph"><p>Actualizar tu repositorio local</p></div>
+<div class="literalblock"><div class="content"><pre>git pull</pre></div></div>
+<div class="paragraph"><p>Merge otra rama con tu rama actual</p></div>
+<div class="literalblock"><div class="content"><pre>git merge &lt;branch&gt;</pre></div></div>
+<div class="paragraph"><p>Ver cambios entre ramas</p></div>
+<div class="literalblock"><div class="content"><pre>git diff &lt;source_branch&gt; &lt;target_branch&gt;</pre></div></div></section>
+<section id="_tagging"><h2>Tagging</h2><div class="literalblock"><div class="content"><pre>git tag 1.0.0 1b2e1d63ff</pre></div></div>
+<div class="paragraph"><p>Donde 1b2e1d63ff son los primeros digitos del commit que quieres usar para el tag</p></div></section>
+<section id="_log_ver_historia"><h2>Log (Ver historia)</h2><div class="literalblock"><div class="content"><pre>git log</pre></div></div>
+<div class="paragraph"><p>Commits por autor</p></div>
+<div class="literalblock"><div class="content"><pre>git log --author=bob</pre></div></div>
+<div class="paragraph"><p>Vista comprimida</p></div>
+<div class="literalblock"><div class="content"><pre>git log --pretty=oneline</pre></div></div>
+<div class="paragraph"><p>Otras opciones</p></div>
+<div class="literalblock"><div class="content"><pre>git log --graph --oneline --decorate --all
+git log --name-status</pre></div></div>
+<div class="literalblock"><div class="content"><pre>git log --help</pre></div></div></section>
+<section id="_reemplazar_cambios_locales"><h2>Reemplazar cambios locales</h2><div class="literalblock"><div class="content"><pre>git checkout -- &lt;filename&gt;</pre></div></div>
+<div class="paragraph"><p>Reemplazar todos los cambios por los del servidor</p></div>
+<div class="literalblock"><div class="content"><pre>git fetch origin
+git reset --hard origin/master</pre></div></div></section>
+<section id="_conclusiones"><h2>Conclusiones</h2><div class="ulist"><ul><li><p>El control de versiones mejora la experiencia de desarrollo</p></li><li><p>Permite manejar cambios y correcciones de una manera más robusta</p></li><li><p>El modelo distribuido y por ramas permite realizar actividades en paralelo</p></li><li><p>La manera más completa de usar git es a través de la línea de comandos</p></li><li><p>Al ser Git el estándar de control de versiones de los proyectos open source posee una gran comunidad my extensa documentación.</p></li></ul></div></section>
+<section><div class="ulist"><ul><li><p><strong>Fuentes:</strong></p></li><li><p>Pro Git - S. Chacon, B. Straub - Apress</p></li><li><p><a href="https://www.javiergarzas.com/2012/11/control-versiones.html">Control de versiones - Javier Garzas</a></p></li><li><p><a href="https://www.javiergarzas.com/2014/05/control-versiones-scrum.html">Control de versiones Scrum - Javier Garzas</a></p></li><li><p><a href="https://www.javiergarzas.com/2014/10/el-camino-de-la-integracion-continua.html">El camino a la integración continua - Javier Garzas</a></p></li><li><p><a href="https://rogerdudler.github.io/git-guide/">Git - The Simple Guide</a></p></li></ul></div>
 <aside class="notes"><div class="paragraph"><p>Para generar pdf incluir al final de la presentación lo siguiente: ?showNotes=separate-page&amp;print-pdf</p></div></aside></section></div></div><script src="reveal.js-3.7.0/lib/js/head.min.js"></script><script src="reveal.js-3.7.0/js/reveal.js"></script><script>Array.prototype.slice.call(document.querySelectorAll('.slides section')).forEach(function(slide) {
   if (slide.getAttribute('data-background-color')) return;
   // user needs to explicitly say he wants CSS color to override otherwise we might break custom css or theme (#226)
